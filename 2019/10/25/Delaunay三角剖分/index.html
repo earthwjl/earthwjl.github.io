@@ -6,14 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Delaunay三角剖分 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;index.html">
+  <meta name="description" content="&amp;emsp;&amp;emsp;最近计算几何课程要求交一个结课论文，借这个机会，我就认真地学习了下Delaunay三角剖分。　　Delaunay三角剖分其实并不是一种算法，它只是给出了一个“好的”三角网格的定义，它的优秀特性是空圆特性和最大化最小角特性，这两个特性避免了狭长三角形的产生，也使得Delaunay三角剖分应用广泛。　　空圆特性其实就是对于两个共边的三角形，任意一个三角形的外接圆中都不能包含有另">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Delaunay三角剖分">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;25&#x2F;Delaunay%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;最近计算几何课程要求交一个结课论文，借这个机会，我就认真地学习了下Delaunay三角剖分。　　Delaunay三角剖分其实并不是一种算法，它只是给出了一个“好的”三角网格的定义，它的优秀特性是空圆特性和最大化最小角特性，这两个特性避免了狭长三角形的产生，也使得Delaunay三角剖分应用广泛。　　空圆特性其实就是对于两个共边的三角形，任意一个三角形的外接圆中都不能包含有另">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-f7db68fab1e00a96.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-165ec56cfc7c0dc1.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-f7b3ea26ce58bc3f.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-7f5cb8547f35261b.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-49e6e3fdd0b93d04.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-c62dfa215288a77e.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-178d2d5fe2bad9e9.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-465e74ca34a79a96.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-3d762cd08d3534c1.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-f825df4ea1a30b9e.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-62aec0de4bea7235.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-9e64712569668cc2.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-1235f27012d4c6f4.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-d9230dfffbb09753.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-b952b331bb0fbf19.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-fc762901718eb1c6.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-729cbe22fc6a9a35.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-cd993954d2d145c2.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
+<meta property="og:updated_time" content="2019-10-25T13:01:32.949Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11176578-f7db68fab1e00a96.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
   
   
     <link rel="icon" href="/favicon.png">
@@ -123,76 +145,178 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Delaunay三角剖分" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Delaunay三角剖分
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/25/Delaunay%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86/" class="archive-article-date">
+
+        
+        <a href="/2019/10/25/Delaunay%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86/" class="archive-article-date">
   	<time datetime="2019-10-25T13:01:32.949Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/25/Delaunay%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86/">Delaunay三角剖分</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp;&emsp;最近计算几何课程要求交一个结课论文，借这个机会，我就认真地学习了下Delaunay三角剖分。<br>　　Delaunay三角剖分其实并不是一种算法，它只是给出了一个“好的”三角网格的定义，它的优秀特性是空圆特性和最大化最小角特性，这两个特性避免了狭长三角形的产生，也使得Delaunay三角剖分应用广泛。<br>　　空圆特性其实就是对于两个共边的三角形，任意一个三角形的外接圆中都不能包含有另一个三角形的顶点，这种形式的剖分产生的最小角最大。<br><img src="https://upload-images.jianshu.io/upload_images/11176578-f7db68fab1e00a96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="不满足空圆特性"><br>　　假如以AC来剖分四边形ABCD，这里B点在三角形ACD的外接圆内，D点在三角形ABC的外接圆内，所以不具有空圆特性<br><img src="https://upload-images.jianshu.io/upload_images/11176578-165ec56cfc7c0dc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="满足空圆特性"><br>　　以BD来剖分四边形ABCD，C点不在三角形ABD的外接圆内，A点也不在三角形BCD的外接圆内，具有空圆特性，而且它的最小角要比不满足空圆特性的最小角大。<br>#问题描述<br>&emsp;&emsp;现在给定了平面上的一个点集V，求出它的Delaunay三角剖分<br><img src="https://upload-images.jianshu.io/upload_images/11176578-f7b3ea26ce58bc3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="点集"><br><img src="https://upload-images.jianshu.io/upload_images/11176578-7f5cb8547f35261b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Delaunay三角剖分"></p>
+<h1 id="Bowyer逐点插入法"><a href="#Bowyer逐点插入法" class="headerlink" title="Bowyer逐点插入法"></a>Bowyer逐点插入法</h1><p>&emsp;&emsp;Bowyer逐点插入法是一个很经典的实现方法，网上的资料大多数都是采用的这种算法。这里使用的算法是按照 <a href="http://paulbourke.net/papers/triangulate/" target="_blank" rel="noopener">Paul Bourke</a>在论文中提供的伪代码实现的，这个伪代码也写的很好，非常容易懂</p>
+<p>以下摘自他的论文</p>
+<blockquote>
+<p>subroutine triangulate<br>input : vertex list 　　输入：顶点链表<br>output : triangle list　　输出：三角形链表<br>initialize the triangle list　　初始化三角形链表<br>  determine the supertriangle　　确定超级三角形<br>  add supertriangle vertices to the end of the vertex list　　 将超级三角形的顶点加入到顶点链表中<br>  add the supertriangle to the triangle list　　将超级三角形加入到三角形链表中<br>  for each sample point in the vertex list　　对顶点链表中的每一个点<br>     initialize the edge buffer　　初始化边数组<br>     for each triangle currently in the triangle list　　对于三角形链表中的每一个三角形<br>        calculate the triangle circumcircle center and radius　　计算出外接圆圆心和半径<br>        if the point lies in the triangle circumcircle then　　如果这个点在三角形的外接圆内<br>           add the three triangle edges to the edge buffer　　把这个三角形的三条边加入到边数组中<br>           remove the triangle from the triangle list　　从三角形链表中将这个三角形删除<br>        endif<br>     endfor<br>     delete all doubly specified edges from the edge buffer　　把边数组中所有重复的边都删除，注意这里是把所有的重复边都删除，比如有边e1,e2,e2,e3，删除后应该只剩e1和e3<br>        this leaves the edges of the enclosing polygon only　　这步会得到一个闭合的多边形<br>     add to the triangle list all triangles formed between the point 用这个点和边数组中的每一条边都组合成一个三角形，加入到三角形链表中<br>        and the edges of the enclosing polygon<br>  endfor<br>  remove any triangles from the triangle list that use the supertriangle vertices从三角形链表中删除使用超级三角形顶点的三角形<br>  remove the supertriangle vertices from the vertex list将超级三角形的顶点从顶点链表中删除<br>end</p>
+</blockquote>
+<p>&emsp;&emsp;在使用过程中，发现“把超级三角形的顶点加入到顶点链表中”似乎没什么必要，另外，顶点用数组存好一点，因为不需要添加和删除。</p>
+<p>&emsp;&emsp;以四个点A、B、C、D举例，首先建立一个超级三角形PQR，这个三角形要把所有点都包含进去。<br><img src="https://upload-images.jianshu.io/upload_images/11176578-49e6e3fdd0b93d04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="建立超级三角形"></p>
+<p>&emsp;&emsp;接着分析A点，因为A点在三角形PQR的外接圆内部，所以利用A点将三角形PQR分拆成三个子三角形。<br><img src="https://upload-images.jianshu.io/upload_images/11176578-c62dfa215288a77e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="A点"></p>
+<p>&emsp;&emsp;再考虑Ｂ点，它只在三角形AQR的内部，再将三角形AQR分拆成三个子三角形。<br><img src="https://upload-images.jianshu.io/upload_images/11176578-178d2d5fe2bad9e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="B点"></p>
+<p>&emsp;&emsp;接着是C点，这时我们有5个三角形，对这5个三角形每一个检查C点在不在它的外接圆内。经过检测，发现它在三角形APR和三角形ABR的外接圆内。<br><img src="https://upload-images.jianshu.io/upload_images/11176578-465e74ca34a79a96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="C点"></p>
+<p>&emsp;&emsp;删除三角形APR和三角形ABR的公共边AR，得到四边形ABPR，并将C点与每一个边组成一个三角形。<br><img src="https://upload-images.jianshu.io/upload_images/11176578-3d762cd08d3534c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="删除公共边"></p>
+<p>&emsp;&emsp;最后对D点进行分析，它在三角形ABC和三角形BCR的外接圆内，所以应删除公共边BC，再用D点与这两个三角形的其他边形成子三角形。<br><img src="https://upload-images.jianshu.io/upload_images/11176578-f825df4ea1a30b9e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="D点"><br><img src="https://upload-images.jianshu.io/upload_images/11176578-62aec0de4bea7235.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="删除公共边"></p>
+<p>&emsp;&emsp;最后把含有超级三角形的顶点的三角形全部删除，就得到这四个点的三角剖分<br><img src="https://upload-images.jianshu.io/upload_images/11176578-9e64712569668cc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="删除超级三角形"></p>
+<p>&emsp;&emsp;我编写程序的时候使用三个点进行测试，有时候结果出不来，是因为在最后一步删除超级三角形的时候是这样的<img src="https://upload-images.jianshu.io/upload_images/11176578-1235f27012d4c6f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">)然后删除超级三角形相关顶点就把所有三角形都删掉了。刚开始的时候我以为是和超级三角形的选取有关，<a href="https://www.cnblogs.com/zhiyishou/p/4430017.html" target="_blank" rel="noopener">纸异兽的文章</a>中也没有详细分析，只提供了一个生成超级三角形的方案。我很好奇这个超级三角形只要包含所有点就可以吗，后来发现当遇到只有三个点的情况就直接相连就可以了，四个点以后就不会出现这种情况。</p>
+<p>&emsp;&emsp;另外关于这个方法，我在Github上看到了一个<a href="https://github.com/jeanbroid/delaunay-cpp" target="_blank" rel="noopener">实现</a>，作者是jeanbroid，用openGL做显示，里面用了很多C++标准库的东西，让我大开眼界，非常感谢他，不过他用到了双缓存，需要把demo.cpp中的GLUT_SINGLE改成GLUT_DOUBLE才能运行。</p>
+<p>#分治法</p>
+<p>&emsp;&emsp;分治法是我在查看<a href="https://en.wikipedia.org/wiki/Delaunay_triangulation" target="_blank" rel="noopener">维基百科</a>的时候看到的，据维基百科说分治法是效率最高的一种方法。在维基百科的引用中发现了一个介绍delaunay三角剖分的分治法的一个非常好的网站，网站作者是<a href="http://www.geom.uiuc.edu/~samuelp/del_project.html" target="_blank" rel="noopener">Samuel Peterson</a>，这个网站主要介绍了在给定条件下的Delaunay三角剖分。</p>
+<p>&emsp;&emsp;分治法进行三角剖分需要对点集中所有点按照x坐标的升序进行排序，x坐标相同时，按照y坐标进行排序，接着将整个点集递归地划分数量相近的两个子集，直到子集中点的数目小于等于3。<br><img src="https://upload-images.jianshu.io/upload_images/11176578-d9230dfffbb09753.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="点集的分割"></p>
+<p>&emsp;&emsp;先给出一个定义方便后面叙述。对于一条边，如果它的两个端点都在分割线的左边，称它为LL边，一端在左边一端在右边称为LR边，两个端点都在右边称为RR边。</p>
+<p>&emsp;&emsp;分治法的重点在于如何递归地合并三角网格。<br>&emsp;&emsp;首先是确定一条LR基线，这条线位于最下方，且不与其他边相交，如27边<br><img src="https://upload-images.jianshu.io/upload_images/11176578-b952b331bb0fbf19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="确定基线"><br>&emsp;&emsp;接着，确定下一条LR边。以右侧三角网为例，按照顺时针方向，计算出∠672，∠872，∠1072，∠972的值，并根据角度大小对顶点进行排序，角度最小的点为第一候选点，以此类推，这里第一候选点为6，第二候选点为8。<br><img src="https://upload-images.jianshu.io/upload_images/11176578-fc762901718eb1c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="候选点的选取"><br>&emsp;&emsp;作三角形276的外接圆，发现第二候选点8不在该外接圆内，且∠672小于180°，故右侧的候选点为6。候选点的要求是以候选点与该侧基线端点形成的角小于180°，且不包含下一候选点。若大于180°，则该侧无候选点，若包含下一候选点，则考虑下一候选点是否满足该条件。按照这种方法对左侧三角网格进行分析，可得到左侧候选点为点3。<br><img src="https://upload-images.jianshu.io/upload_images/11176578-729cbe22fc6a9a35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="LR边的选择"><br>　　当左右两侧都存在候选点时，如当前情况，这时需要考虑下一条LR边是37还是26。作三角形237的外接圆，可发现右侧候选点6在此外接圆外，而左侧候选点在三角形276外接圆内，故下一条LR边为边37。<br>　　当只有一侧存在候选点时，将此候选点与基线另一侧的端点连线作为下一条LR边。</p>
+<p>&emsp;&emsp;将边37作为下一条基线重复该过程，直到两边都不存在候选点，程序结束。</p>
+<p>附一张Bowyer算法最后的显示效果<br><img src="https://upload-images.jianshu.io/upload_images/11176578-cd993954d2d145c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/25/Delaunay%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/25/UG%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2019-10-25T12:18:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/25/UG%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">UG二次开发编程环境搭建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/25/UG%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">UG二次开发编程环境搭建</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -215,8 +339,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
